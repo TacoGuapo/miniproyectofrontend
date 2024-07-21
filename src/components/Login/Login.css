@@ -1,0 +1,123 @@
+.principal-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 710px;
+  }
+  
+  .login-menu .logo-login{
+    
+    align-items: center;
+    justify-content: space-between;
+    width: 130px;
+    height: 18px;
+  
+  }
+  
+  .login-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid #BDBDBD;
+    border-radius: 24px;
+    width: 358.48px;
+    
+    padding: 4rem 4rem;
+    
+  }
+  
+  .login-id {
+    align-items: center;
+  }
+  
+  .login-title {
+    font-size: 18px;
+    font-weight: 600px;
+    line-height: 24.52px;
+    letter-spacing: -0.035em;
+    font-family: "Noto Sans", sans-serif;
+    
+  }
+  
+  
+  .login-input {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 1rem;
+    margin-bottom: 15px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid #BDBDBD;
+  }
+  
+  .login-input input {
+      border: none;
+      outline: none;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 14px;  
+      
+      line-height: 21.79px;
+      letter-spacing: -0.035em;
+      background-color: var(--bg-color);
+      color: var(--color);
+    }
+  
+  .button-login{
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #2F80ED;
+    color: white;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:100%;
+    height: 38px;
+    font-size: 16px;
+  }
+  
+  
+  .spanone{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    color: #828282;
+    padding-top: 20px;
+  }
+  
+  .images {
+    text-align: center;
+  }
+  
+  .images .socials {
+    display: inline-block; 
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  
+  .register {
+    font-size: 14px;
+    font-weight: 400;  
+    text-align: center;
+    
+  }
+  
+  .spantwo {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    letter-spacing: -0.035em;
+    text-align: center;
+    color: #828282;
+    margin-top: auto;
+  }
