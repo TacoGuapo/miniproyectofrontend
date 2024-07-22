@@ -1,45 +1,23 @@
-import React from 'react'
+import React from 'react';
+import './Modal.css';
 
-function Modal() {
-    const { setIsValidToken, setUserData, showMenu, setShowMenu } =
-    useContext(DataContext)
-  const navigate = useNavigate()
+const Modal = ({ isOpen, onClose, onLogout }) => {
+  return (
+    <>
+      {isOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <button className="square-button" onClick={onClose}>+</button>
+            <ul>
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">Group Chat</a></li>
+              <li><button onClick={onLogout}>Logout</button></li>
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
-  const handleLogout = () => {
-    setIsValidToken(false)
-    setUserData({})
-    localStorage.removeItem('token')
-    navigate('/login')
-  }
-
-  return (  
-    <div className="menu-cmp">
-      <div className="theme-switch">
-        <ThemeSwitch />
-      </div>
-      <div className="menu-header" onClick={() => setShowMenu(!showMenu)}>
-        <img src={src} alt="Profile picture"
-          height={32} width={32} />
-        <span>{username}</span>
-        <DeployMenu />
-      </div>
-      {showMenu && <div className="menu-items-wrapper">
-        <button title="En proceso de imlementación">
-          <Profile />
-          Mi Perfil
-        </button>
-        <button title="En proceso de imlementación">
-          <Chat />
-          Chat
-        </button>
-        <div className="line"></div>
-        <button onClick={handleLogout}>
-          <Logout />
-          Cerrar sesión
-        </button>
-      </div>}
-    </div>
-  )
-}
-
-export default Modal
+export default Modal;

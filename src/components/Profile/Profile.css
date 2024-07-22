@@ -1,3 +1,4 @@
+
 .menu-profile {
     font-family: "Noto Sans", sans-serif;
     display: flex;
@@ -146,6 +147,7 @@
   }
   
   .field {
+    
     display: flex;
     align-items: center;
     padding: 0.9rem 3rem;
@@ -182,4 +184,24 @@
     height: 100px;
     resize: vertical; 
   }
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"],
+.field textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+.field input[readonly],
+.field textarea[readonly] {
+    
+    border-color: transparent; 
+    font-family: "Noto Sans", sans-serif;
+}
   

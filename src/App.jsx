@@ -7,11 +7,13 @@ import Profile from './components/Profile/Profile';
 function App() {
   return (
     <div>
+      
       <Routes>
-        <Route path="/login" element={<Login />} /> 
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} />
       </Routes>
+     
     </div>
   );
 }

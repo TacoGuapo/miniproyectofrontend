@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import './Login.css'; // Asegúrate de importar los estilos
+import axios from '../../api/api';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css'
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('URL_DE_TU_API_PARA_LOGIN', { email, password });
-      console.log(response.data); // Maneja la respuesta según tu API
-      // Aquí podrías redirigir al perfil u otra página si el inicio de sesión es exitoso
+      const response = await axios.post('/login', { email, password });
+      console.log(response.data);
+    
+      navigate('/profile');
     } catch (error) {
       console.error('Error:', error);
     }
@@ -46,7 +49,7 @@ function Login() {
         </div>
         <div className='spantwo'>
           <span>
-            Don't have an account yet? <a className='register' href="/register">Register</a>
+            Don't have an account yet? <Link className='register' to="/register">Register</Link>
           </span>
         </div>
       </div>

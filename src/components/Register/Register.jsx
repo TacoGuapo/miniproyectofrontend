@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import './Register.css'; // Asegúrate de importar los estilos
+import axios from '../../api/api';
+import { useNavigate } from 'react-router-dom'; 
+import './Register.css';
 
 function Register() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('URL_DE_TU_API_PARA_REGISTRO', { email, password });
-      console.log(response.data); // Maneja la respuesta según tu API
-      // Aquí podrías redirigir al perfil u otra página si el registro es exitoso
+      const response = await axios.post('/register', { email, password });
+      console.log(response.data);
+      navigate('/login')
     } catch (error) {
       console.error('Error:', error);
     }
